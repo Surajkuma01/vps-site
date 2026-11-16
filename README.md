@@ -1,78 +1,100 @@
-# FORM & SPACE BY VPS — Architectural Studio & Construction
+# FORM & SPACE BY VPS — Architectural Studio Platform
 
-> Premier architectural design, luxury residential villas, high-performance commercial towers, and turnkey execution studio website across Punjab, India.
-
----
-
-## 🛠️ Tech Stack
-
-* **Frontend**: React 19, TypeScript, Vite
-* **Styling**: Tailwind CSS, Cormorant Garamond & Manrope typography
-* **Routing**: React Router DOM (v7) with Single Page Application (SPA) routing
-* **Icons**: Lucide React
-* **CMS & Persistence**: Built-in Admin Panel with LocalStorage synchronization & Google Sheets / Excel Webhook integration
-* **Deployment**: Optimized for Vercel, Netlify, and Cloudflare Pages
+A web platform built for **FORM & SPACE BY VPS**, a luxury architectural design, turnkey construction, and spatial engineering studio in Punjab, India. The application showcases residential villas, commercial towers, live on-site construction surveillance, and architectural drawings.
 
 ---
 
-## 🚀 How to Push to GitHub & Deploy on Vercel
+## 🌟 Core Website Features & Functionality
 
-### Step 1: Create a New GitHub Repository
+### 1. Interactive 360° Multi-Angle Viewer
+* **Spherical & Multi-Angle Orbit**: Allows clients to view projects from four cardinal angles: 0° Front Elevation, 90° Right Profile, 180° Rear Garden, and 270° Left Profile.
+* **Architectural Hotspots**: Interactive inspection pins plotted over coordinates (Curtain Wall Facade, Cantilevered Portico, Natural Travertine Cladding). Clicking a pin reveals technical construction specifications.
+* **Daylight & Twilight Simulation**: Real-time lighting mode toggle adjusting hue, contrast, and color grading to preview projects under natural sunlight or warm evening twilight.
+* **1:1 Uncropped Exact Fit**: Renders angle views in their true aspect ratio with zoom controls (mouse wheel or HUD slider) and an instant 1:1 reset button.
 
-1. Log into your GitHub account: [github.com](https://github.com).
-2. Click the **`+`** icon in the top-right corner and select **New repository**.
-3. Repository Settings:
-   * **Repository name**: e.g., `form-and-space-vps` (or `suraj-site`)
-   * **Visibility**: Choose **Public** or **Private**
-   * **Do NOT** check "Add a README file", ".gitignore", or "license" (we already have these prepared locally).
-4. Click **Create repository**.
-5. Copy your repository's URL (e.g., `https://github.com/your-username/form-and-space-vps.git`).
+### 2. Architectural Blueprint & Floor Plan Viewer
+* **Multi-Sheet Navigation**: Allows switching between different architectural drawings (Ground Floor Plan, Upper Floors, Section Elevations, and Structural Schematics).
+* **High-Precision Scale Canvas**: Dark-matte technical viewer preserving fine drawing lines, dimensions, and statutory details with zero distortion or edge cropping.
+
+### 3. High-Resolution Gallery
+* **Uncropped Aspect Ratio Engine**: Configured with `object-fit: contain` by default to display photography in its native resolution and aspect ratio without artificial cropping.
+* **Aspect Mode Toggle**: Provides a quick toggle between `✓ Exact Fit (Uncropped)` and `Fill Screen`.
+* **Smooth Horizontal Navigation**: Touch-friendly horizontal thumbnail strip for rapid navigation across extensive photo collections.
+
+### 4. Live On-Site Construction Tracker
+* **Real-Time Surveillance Badge**: Highlights ongoing builds under active construction.
+* **Progress Meter**: Visual progress percentage bar (e.g. 75% complete), current construction phase milestones (e.g. *Superstructure & Façade Glazing*), and target handover ETA.
+* **Filter Integration**: Dedicated filter tag in the portfolio archive (`Live Projects`) for quick client inspection of ongoing works.
+
+### 5. In-Browser Studio CMS / Admin Panel (`/admin`)
+* **Passcode-Protected Dashboard**: Secure authentication gating the studio management tools.
+* **Full Project Data Customization**: Ability to add, edit, or remove project titles, categories, locations, completion years, square footage, scopes of work, and materials.
+* **Live Media Cloud Normalizer**: Automatically detects and normalizes raw Google Drive URLs (`drive.google.com/file/d/...`, `drive.google.com/open?id=...`, `lh3.googleusercontent.com/d/...`) into embeddable URLs with `no-referrer` protection.
+* **Live Thumbnail Previews & Lightbox**: Interactive visual strips for Cover, Gallery, 360° Views, and Blueprints with single-click delete (`✕`) and full-screen inspection modal.
+* **Data Persistence & Cloud Sync**: Automatically persists studio changes in browser `localStorage` and synchronizes with global React context.
+
+### 6. Automated Google Sheets & Excel Webhook System
+* **Consultation & Project Enquiry Modals**: Captures project inquiries, requested project types, locations, budget ranges, and client vision notes.
+* **Multi-Tab Routing**: Automatically routes inquiries into designated Google Sheet tabs (e.g., General Enquiries vs. `Projects` tab).
+* **Non-Blocking Protocol**: Implements `mode: 'no-cors'` with plain-text JSON payload encoding, guaranteeing data delivery to Google Apps Script webhooks.
 
 ---
 
-### Step 2: Push Local Code to Your GitHub Repository
+## 🏗️ Code Architecture & Directory Structure
 
-Open your terminal in this project directory (`c:\Users\NITIN GARG\OneDrive\Documents\Suraj_site`) and run:
-
-```bash
-# 1. Add your remote GitHub repository (replace with your copied URL)
-git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
-
-# 2. Push your main branch to GitHub
-git push -u origin main
+```
+Suraj_site/
+├── public/
+│   ├── vps-logo.png             # Studio brand logo
+│   ├── favicon.svg              # Browser tab icon
+│   ├── _redirects               # SPA rewrite rule for Netlify
+│   └── robots.txt               # Search engine crawler policies
+├── src/
+│   ├── components/
+│   │   ├── Navbar.tsx           # Responsive header with scroll-reactive styling & mobile drawer
+│   │   ├── Hero.tsx             # Editorial landing hero with ambient particle engine
+│   │   ├── FeaturedProject.tsx  # Editorial showcase for flagship studio works
+│   │   ├── ProjectsPortfolio.tsx# Interactive project grid with category filtering
+│   │   ├── ProjectDetail.tsx    # Modal containing the 360° viewer, blueprints & narrative
+│   │   ├── EnquiryForm.tsx      # Multi-field project consultation modal
+│   │   ├── Footer.tsx           # Studio branding, social links & legal navigation
+│   │   └── PageTransition.tsx   # Smooth route change transition wrapper
+│   ├── pages/
+│   │   ├── HomePage.tsx         # Studio overview, featured works, process & statistics
+│   │   ├── ProjectsPage.tsx     # Full architectural archive & live active builds
+│   │   ├── AboutPage.tsx        # Studio philosophy, team credentials & craftsmanship values
+│   │   ├── ServicesPage.tsx     # Architectural design, turnkey execution & consultation scopes
+│   │   ├── AdminPage.tsx        # Complete studio CMS & project editor
+│   │   ├── PrivacyPolicyPage.tsx# Client confidentiality & site privacy dossier
+│   │   └── TermsOfUsePage.tsx   # Studio architectural copyright & usage terms
+│   ├── context/
+│   │   └── SiteDataContext.tsx  # Global state provider managing projects, services & CMS data
+│   ├── data/
+│   │   ├── projects.ts          # Default portfolio catalog, specs & fallback assets
+│   │   └── services.ts          # Architectural service tiers & deliverables
+│   ├── utils/
+│   │   └── imageUrl.ts          # Google Drive CDN link normalizer & multi-link parsers
+│   ├── config/
+│   │   └── spreadsheet.ts       # Google Apps Script webhook integration & options
+│   ├── App.tsx                  # Client router declaration & route scroll management
+│   ├── main.tsx                 # React application mounting point
+│   └── index.css                # Global design tokens, typography & keyframe animations
+├── vercel.json                  # SPA rewrite configuration for Vercel deployment
+├── vite.config.ts               # Vite configuration with chunk splitting & Tailwind plugin
+└── package.json                 # Project dependencies & build scripts
 ```
 
-*(If prompted, sign in with your GitHub account or Personal Access Token).*
-
 ---
 
-### Step 3: Deploy on Vercel (1-Click Deployment)
+## 💻 Tech Stack & Design System
 
-1. Go to [vercel.com](https://vercel.com) and log in (recommended: **Continue with GitHub**).
-2. From the Vercel Dashboard, click **Add New...** > **Project**.
-3. Under **Import Git Repository**, find your repository (`form-and-space-vps`) and click **Import**.
-4. Configure Project settings (Vercel automatically detects these):
-   * **Framework Preset**: `Vite`
-   * **Root Directory**: `./`
-   * **Build Command**: `npm run build`
-   * **Output Directory**: `dist`
-5. Click **Deploy**.
-6. Within ~60 seconds, your website will be live with a free global SSL URL: `https://your-project.vercel.app`!
-
----
-
-### 🌐 Custom Domain Setup on Vercel (Optional)
-
-1. In your Vercel Project Dashboard, navigate to **Settings** > **Domains**.
-2. Enter your custom domain (e.g. `formandspace.com` or `vpsarchitects.com`).
-3. Add the DNS records (CNAME or A records) shown by Vercel into your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.).
-4. Vercel will automatically provision free, auto-renewing SSL certificates.
-
----
-
-### 📂 Important Files Configured for Deployment
-
-* **`vercel.json`**: Configures client-side rewrite rules so that refreshing any sub-page (e.g. `/projects`, `/about`, `/services`, `/admin`) never throws a 404 error.
-* **`public/_redirects`**: Fallback routing rule for Netlify deployments.
-* **`public/robots.txt`**: Optimizes search engine indexing while safeguarding the `/admin` route.
-* **`src/config/spreadsheet.ts`**: Webhook endpoint for live Google Sheets integration.
+* **Frontend Engine**: React 19 with TypeScript
+* **Build Tooling**: Vite with optimized vendor chunking (`vendor-react`, `vendor-icons`)
+* **Styling**: Tailwind CSS & scoped CSS with design token variables:
+  * Brand Gold / Terracotta: `#bfa15f`
+  * Studio Charcoal: `#131211` / `#1a1714`
+  * Architectural Cream: `#faf8f5`
+* **Typography**:
+  * Headlines & Display: *Cormorant Garamond* (Editorial Serif)
+  * Interface & Technical Specs: *Manrope* (Clean Sans-Serif)
+* **Icons**: Lucide React
