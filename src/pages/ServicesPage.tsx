@@ -8,6 +8,7 @@ import {
 import { useSiteData } from '../context/SiteDataContext';
 import { consultationPackages, type ServiceItem } from '../data/services';
 import { sendEnquiryToSpreadsheet } from '../config/spreadsheet';
+import { normalizeImageUrl } from '../utils/imageUrl';
 import Footer from '../components/Footer';
 
 // Map icon string name to Lucide component
@@ -301,8 +302,9 @@ export default function ServicesPage() {
                 {/* Card Visual Header */}
                 <div className="image-sheen-container" style={{ position: 'relative', height: '220px', overflow: 'hidden' }}>
                   <img
-                    src={service.image}
+                    src={normalizeImageUrl(service.image)}
                     alt={service.title}
+                    referrerPolicy="no-referrer"
                     className="service-card-img"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

@@ -162,7 +162,7 @@ export const initialServices: ServiceItem[] = [
       { step: 'Steel & Concrete Auditing', detail: 'Strict quality control testing on batching plants and reinforcement bars.' },
     ],
     idealFor: 'Multi-Story Buildings, Commercial Plazas, Expansive Cantilever Villas',
-    image: 'https://plus.unsplash.com/premium_photo-1681691912442-68c4179c530c?w=1200&q=80',
+    image: 'https://lh3.googleusercontent.com/d/15pzdfChNTJQh06F8g4bMatfbd6qYyo5k',
     iconName: 'Layers',
   },
   {
