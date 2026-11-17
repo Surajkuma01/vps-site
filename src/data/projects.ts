@@ -1,9 +1,9 @@
-export type ProjectCategory = 
-  | 'Residential' 
-  | 'Commercial' 
-  | 'Office' 
-  | 'Retail' 
-  | 'Interior Design' 
+export type ProjectCategory =
+  | 'Residential'
+  | 'Commercial'
+  | 'Office'
+  | 'Retail'
+  | 'Interior Design'
   | 'Turnkey';
 
 export interface ProjectStat {
@@ -28,7 +28,7 @@ export interface Project {
   featured?: boolean;
   materials: string[];
   stats: ProjectStat[];
-  
+
   // Live / Ongoing Project Features
   isLive?: boolean;
   progress?: number; // e.g. 75 for 75%
