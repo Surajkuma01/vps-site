@@ -10,24 +10,9 @@ const InstagramIcon = () => (
   </svg>
 );
 
-const YoutubeIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.5C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
-    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none" />
-  </svg>
-);
-
-const LinkedinIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect x="2" y="9" width="4" height="12" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
-const TwitterIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+const WhatsAppIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19L7.55 18.82L4.43 19.64L5.26 16.59L5.06 16.27C4.24 14.96 3.81 13.45 3.81 11.91C3.81 7.37 7.5 3.68 12.04 3.68C14.25 3.68 16.31 4.54 17.87 6.1C19.42 7.66 20.28 9.72 20.28 11.92C20.28 16.46 16.59 20.15 12.05 20.15ZM16.57 14.37C16.32 14.25 15.1 13.65 14.88 13.56C14.65 13.48 14.49 13.44 14.32 13.69C14.16 13.93 13.69 14.49 13.55 14.65C13.41 14.81 13.27 14.83 13.02 14.71C12.78 14.59 11.99 14.33 11.05 13.49C10.32 12.84 9.83 12.04 9.69 11.79C9.55 11.55 9.67 11.42 9.79 11.3C9.9 11.19 10.04 11.01 10.16 10.87C10.28 10.73 10.32 10.63 10.4 10.46C10.48 10.3 10.44 10.16 10.38 10.04C10.32 9.92 9.83 8.71 9.63 8.21C9.43 7.73 9.23 7.79 9.07 7.79C8.93 7.78 8.76 7.78 8.6 7.78C8.44 7.78 8.17 7.84 7.95 8.08C7.72 8.33 7.09 8.92 7.09 10.12C7.09 11.33 7.97 12.49 8.09 12.65C8.21 12.81 9.82 15.3 12.3 16.36C12.89 16.61 13.35 16.76 13.71 16.88C14.3 17.07 14.84 17.04 15.27 16.98C15.75 16.91 16.74 16.38 16.95 15.8C17.16 15.21 17.16 14.71 17.09 14.6C17.03 14.49 16.82 14.49 16.57 14.37Z" />
   </svg>
 );
 
@@ -35,10 +20,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <InstagramIcon />, href: '#', label: 'Instagram' },
-    { icon: <YoutubeIcon />, href: '#', label: 'YouTube' },
-    { icon: <LinkedinIcon />, href: '#', label: 'LinkedIn' },
-    { icon: <TwitterIcon />, href: '#', label: 'Twitter' },
+    {
+      icon: <InstagramIcon />,
+      href: 'https://www.instagram.com/vijaypal_and_sons?xtok=MWkxb28xcngxdGl4bw==',
+      label: 'Instagram',
+    },
+    {
+      icon: <WhatsAppIcon />,
+      href: 'https://wa.me/918427930197?text=Hello%20FORM%20%26%20SPACE%20BY%20VPS,%20I%20am%20interested%20in%20discussing%20a%20project.',
+      label: 'WhatsApp',
+    },
   ];
 
   return (
@@ -107,6 +98,8 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={s.label}
                   style={{
                     width: '36px',
