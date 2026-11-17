@@ -3,8 +3,7 @@ import {
   Plus, Edit3, Trash2, Save, Download, Upload, RotateCcw, 
   ExternalLink, Building2, CheckCircle2, Lock, Eye, 
   Layers, Compass, AlertCircle, Sparkles, Check, X, ShieldAlert,
-  Key, ShieldCheck, Server, Globe, Image as ImageIcon,
-  Cloud, RefreshCw
+  Key, ShieldCheck, Server, Globe, Image as ImageIcon
 } from 'lucide-react';
 import { useSiteData } from '../context/SiteDataContext';
 import { type Project, type ProjectCategory } from '../data/projects';
@@ -73,15 +72,13 @@ export default function AdminPage() {
   const { 
     projects, 
     services, 
-    isCloudSyncing,
     addProject, 
     updateProject, 
     deleteProject, 
     updateService, 
     resetDefaults, 
     exportDataJSON, 
-    importDataJSON,
-    syncToCloudNow
+    importDataJSON 
   } = useSiteData();
 
   // Auth state
@@ -489,40 +486,7 @@ export default function AdminPage() {
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-          <button
-            type="button"
-            onClick={async () => {
-              showToast('Syncing all changes to Google Cloud...');
-              const ok = await syncToCloudNow();
-              if (ok) {
-                showToast('All projects successfully synced to Google Sheet!');
-              } else {
-                showToast('Sync sent to Google Cloud.');
-              }
-            }}
-            disabled={isCloudSyncing}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '7px 14px',
-              backgroundColor: isCloudSyncing ? '#2e7d32' : 'rgba(191,161,95,0.2)',
-              border: `1px solid ${tc}`,
-              color: 'white',
-              borderRadius: '4px',
-              fontFamily: 'Manrope, sans-serif',
-              fontSize: '11px',
-              fontWeight: 700,
-              cursor: isCloudSyncing ? 'not-allowed' : 'pointer',
-              letterSpacing: '0.04em',
-              transition: 'all 0.3s',
-            }}
-          >
-            <Cloud size={13} color={tc} />
-            {isCloudSyncing ? 'Syncing to Cloud...' : '☁️ Sync to Google Sheet'}
-          </button>
-
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <a
             href="/projects"
             target="_blank"

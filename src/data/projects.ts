@@ -43,281 +43,484 @@ export interface Project {
 export const initialProjects: Project[] = [
   {
     id: 1,
-    slug: 'modern-villa-exterior',
-    title: 'Modern Villa Exterior',
+    slug: 'neo-classical-villa',
+    title: 'Neo Classical Villa',
     category: 'Residential',
     location: 'Ludhiana, Punjab',
-    year: '2024',
-    description: 'A luxury villa featuring bespoke architectural design, premium finishes, and a refined modern facade.',
-    longDescription:
-      'This luxury villa in Ludhiana represents modern residential architecture at its finest. Characterized by clean geometric lines, extensive use of natural stone cladding, and expansive glazing, the project blends indoor and outdoor living seamlessly. Every material was specified by our studio for quality, durability, and visual harmony (construction executed by an independent third-party contractor).',
-    scope: ['Architectural Design', 'Structural Engineering', 'Interior Finishing', 'Landscape Architecture', 'Third-Party Turnkey Referral'],
-    status: 'Completed',
-    area: '4,200 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
+    year: '2027',
+    description: 'A luxury villa featuring bespoke architectural design, premium finishes, and a refined neo classical facade.',
+    longDescription: 'This luxury villa in Ludhiana represents modern residential architecture at its finest. Characterized by clean geometric lines, extensive use of natural stone cladding, and expansive glazing, the project blends indoor and outdoor living seamlessly. Every material was specified by our studio for quality, durability, and visual harmony (construction executed by an independent third-party contractor).',
+    scope: [
+      'Architectural Design',
+      'Structural Engineering',
+      'Interior Finishing',
+      'Landscape Architecture',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Finishing Stage',
+    area: '5200 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1Y2hjShxMlUxEGs_geRjDQ0AluZSQfU_H',
     gallery: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1Y2hjShxMlUxEGs_geRjDQ0AluZSQfU_H',
+      'https://lh3.googleusercontent.com/d/1TtK8bpViYgm7Oofxi84hzZBq9401R56M',
+      'https://lh3.googleusercontent.com/d/166LLv0fub-TsAsmZeTg1N-YJn4kOEVQd'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1Y2hjShxMlUxEGs_geRjDQ0AluZSQfU_H',
+      'https://lh3.googleusercontent.com/d/1TtK8bpViYgm7Oofxi84hzZBq9401R56M',
+      'https://lh3.googleusercontent.com/d/166LLv0fub-TsAsmZeTg1N-YJn4kOEVQd'
     ],
-    blueprints: [
-      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80',
-    ],
+    blueprints: [],
     featured: true,
-    materials: ['Italian Marble', 'Teak Wood', 'Aluminium Glazing', 'Natural Stone Cladding', 'Anti-skid Tiles'],
-    stats: [
-      { label: 'Built Area', value: '4,200 sq.ft.' },
-      { label: 'Duration', value: '18 Months' },
-      { label: 'Floors', value: '2' },
-      { label: 'Year', value: '2024' },
+    materials: [
+      'Teak Wood',
+      'Aluminium Glazing',
+      'Natural Stone Cladding',
+      'Anti-skid Tiles',
+      'Italian Tiles',
+      'Granite Flooring',
+      'Textured Paint'
     ],
+    stats: [
+      {
+        label: 'Built Area',
+        value: '5,200 sq.ft.'
+      },
+      {
+        label: 'Duration',
+        value: '30 Months'
+      },
+      {
+        label: 'Floors',
+        value: '2.5'
+      },
+      {
+        label: 'Year',
+        value: '2027'
+      }
+    ],
+    isLive: true,
+    progress: 80,
+    currentPhase: 'Flooring and Pop Ceiling',
+    estimatedHandover: 'Dec 2027'
   },
   {
     id: 2,
-    slug: 'lumina-corporate-tower',
-    title: 'Lumina Corporate Tower',
-    category: 'Office',
-    location: 'Aerocity, Mohali',
-    year: '2024',
-    description: 'A 7-story Grade-A sustainable commercial office building with high-performance glass facade.',
-    longDescription:
-      'Engineered for next-generation tech enterprises, Lumina Corporate Tower features column-free floor plates, integrated solar louvers, and expansive collaborative atriums. The design balances acoustical comfort with flood-lit biophilic work zones.',
-    scope: ['Commercial Architecture', 'Structural Steel Design', 'HVAC & MEP Engineering', 'Smart BMS', 'Bespoke Facade'],
-    status: 'Completed',
-    area: '42,000 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
+    slug: 'cafe-classic',
+    title: 'Cafe Classic',
+    category: 'Commercial',
+    location: 'Mullanpur Dakha, Ludhiana',
+    year: '2027',
+    description: 'Crafting Spaces, Creating Experiences',
+    longDescription: 'Cafe Classic is an architectural design project focused on creating an elegant, comfortable, and inviting café environment. The design emphasizes a perfect balance of aesthetics, functionality, and customer experience.',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Under Construction',
+    area: '1200 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1qIeKT3lihpHUEb_vKrOgsbobq7yPUEHm',
     gallery: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80',
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1qIeKT3lihpHUEb_vKrOgsbobq7yPUEHm',
+      'https://lh3.googleusercontent.com/d/1Uow2XU60dedd89rGYkp9kSetPG6f9jRI',
+      'https://lh3.googleusercontent.com/d/1z78VACLDrxZM2_QI0QW4yqbyFNCAw1OX'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80',
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1qIeKT3lihpHUEb_vKrOgsbobq7yPUEHm',
+      'https://lh3.googleusercontent.com/d/1Uow2XU60dedd89rGYkp9kSetPG6f9jRI',
+      'https://lh3.googleusercontent.com/d/1z78VACLDrxZM2_QI0QW4yqbyFNCAw1OX'
     ],
     featured: true,
-    materials: ['Curtain Wall Glass', 'Anodized Bronze Aluminium', 'Engineered Quartz', 'Acoustic Slat Wood'],
-    stats: [
-      { label: 'Built Area', value: '42,000 sq.ft.' },
-      { label: 'Floors', value: '7 Floors' },
-      { label: 'Occupancy', value: '650+' },
-      { label: 'Green Rating', value: 'GRIHA 4-Star' },
+    materials: [
+      'WPC louver',
+      'GRC Molding',
+      'VItrified Tiles',
+      'Textured Paint',
+      'Elegant Interior'
     ],
+    stats: [
+      {
+        label: 'Built Area',
+        value: '1200 sq.ft.'
+      },
+      {
+        label: 'Floors',
+        value: '2 Floors'
+      },
+      {
+        label: 'Occupancy',
+        value: '35'
+      }
+    ],
+    isLive: true,
+    progress: 5,
+    currentPhase: 'excavation',
+    estimatedHandover: 'July 2027',
+    blueprints: []
   },
   {
     id: 3,
-    slug: 'the-atelier-luxury-boutique',
-    title: 'The Atelier Luxury Boutique',
-    category: 'Retail',
-    location: 'Sector 17, Chandigarh',
-    year: '2024',
-    description: 'An haute-couture retail boutique combining micro-cement, warm brass accents, and dynamic spotlighting.',
-    longDescription:
-      'Designed to elevate high-end apparel shopping into an experiential gallery, The Atelier showcases curved fluted plaster walls, floating brass display racks, and sculpted travertine plinths. Every angle was formulated to optimize customer foot-traffic flow and product prominence.',
-    scope: ['Retail Interior Architecture', 'Custom Lighting Layout', 'Bespoke Display Fixtures', 'Contractor Advisory'],
+    slug: 'aarambh-villa',
+    title: 'Aarambh Villa',
+    category: 'Residential',
+    location: 'Haryana',
+    year: '2026',
+    description: 'Where Elegance Meets Eternity',
+    longDescription: 'Aarambh Villa is a perfect blend of contemporary architecture and classical elegance. Featuring graceful arches, refined facade detailing, warm beige tones and luxurious lighting, the residence creates a timeless expression of sophistication, comfort and modern living.',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
     status: 'Completed',
-    area: '3,800 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80',
+    area: '7000 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/14eJuccu7iOr37WdwzvWijmVmTsbmfIEu',
     gallery: [
-      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80',
-      'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/14eJuccu7iOr37WdwzvWijmVmTsbmfIEu',
+      'https://lh3.googleusercontent.com/d/1iUjauicoA0w7gHKDXWAR4wHj5B2qAygF',
+      'https://lh3.googleusercontent.com/d/1XRvaosvLdxjAClQyOR24QlqSSCrlFBj_',
+      'https://lh3.googleusercontent.com/d/1Bg2q8b4s8oo6tJOVZwrVEvwv-T9JTzE2'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80',
-      'https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=1200&q=80',
-      'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/14eJuccu7iOr37WdwzvWijmVmTsbmfIEu',
+      'https://lh3.googleusercontent.com/d/1iUjauicoA0w7gHKDXWAR4wHj5B2qAygF',
+      'https://lh3.googleusercontent.com/d/1XRvaosvLdxjAClQyOR24QlqSSCrlFBj_',
+      'https://lh3.googleusercontent.com/d/1Bg2q8b4s8oo6tJOVZwrVEvwv-T9JTzE2'
     ],
     featured: true,
-    materials: ['Roman Travertine', 'Brushed Champagne Brass', 'Venetian Plaster', 'Smoked Glass'],
-    stats: [
-      { label: 'Retail Area', value: '3,800 sq.ft.' },
-      { label: 'Timeline', value: '4 Months' },
-      { label: 'Levels', value: '2' },
-      { label: 'Year', value: '2024' },
+    materials: [
+      'natural Stone',
+      'Textured Paint',
+      'GRC Molding',
+      'M/S Railing',
+      'Italian Tiles',
+      'Granite Outdoor Flooring'
     ],
+    stats: [
+      {
+        label: 'Built up Area',
+        value: '7000 sq.ft.'
+      },
+      {
+        label: 'Timeline',
+        value: '24 Months'
+      },
+      {
+        label: 'Levels',
+        value: '2.5'
+      },
+      {
+        label: 'Year',
+        value: '2026'
+      }
+    ],
+    isLive: false,
+    progress: 75,
+    currentPhase: '',
+    estimatedHandover: '',
+    blueprints: []
   },
   {
     id: 4,
-    slug: 'serene-minimalist-penthouse',
-    title: 'Serene Minimalist Penthouse',
-    category: 'Interior Design',
-    location: 'Ludhiana, Punjab',
-    year: '2024',
-    description: 'An open-concept penthouse interior blending Japandi elegance with warm timber joinery.',
-    longDescription:
-      'A complete architectural interior transformation overlooking the city skyline. Features custom walnut cabinetry, seamless micro-concrete flooring, recessed ambient illumination, and a sculptural fluted marble kitchen island.',
-    scope: ['Full Interior Architecture', 'Custom Millwork & Joinery', 'Furniture Curation', 'Smart Lighting Controls'],
-    status: 'Completed',
-    area: '4,600 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80',
+    slug: 'modern-villa',
+    title: 'Modern Villa',
+    category: 'Residential',
+    location: 'Dugri,Ludhiana, Punjab',
+    year: '2027',
+    description: 'Where Contemporary Architecture Meets Luxury, Comfort & Elegance',
+    longDescription: 'The Modern Villa is a thoughtfully designed residential architectural project that brings together contemporary aesthetics, luxury, comfort, and functionality. The design aims to create a refined living experience through modern architectural elements, spacious layouts, elegant detailing, and a strong connection with the surrounding environment.',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Finishing Stage',
+    area: '5400 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1h1I183UA4XXJ1id5BDvGfh4RbqRBatDG',
     gallery: [
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=80',
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1iFFEi0RXb6UwfOEHHKe0hvXboq2bp-xl',
+      'https://lh3.googleusercontent.com/d/1zmDVD_coDpe62pgjJjn48SNhiMCSSFem',
+      'https://lh3.googleusercontent.com/d/1O4hqSkUrC_ee9jAI2_jOhV_uBWXxLZWl',
+      'https://lh3.googleusercontent.com/d/1h1I183UA4XXJ1id5BDvGfh4RbqRBatDG',
+      'https://lh3.googleusercontent.com/d/1W2uohxSkZbTQZUGNTzGmt1fW-4V0ZX2i',
+      'https://lh3.googleusercontent.com/d/1qOq6dzqk3jxPaMB4t0LoQ0VEydTJyNMw'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1iFFEi0RXb6UwfOEHHKe0hvXboq2bp-xl',
+      'https://lh3.googleusercontent.com/d/1zmDVD_coDpe62pgjJjn48SNhiMCSSFem',
+      'https://lh3.googleusercontent.com/d/1O4hqSkUrC_ee9jAI2_jOhV_uBWXxLZWl',
+      'https://lh3.googleusercontent.com/d/1h1I183UA4XXJ1id5BDvGfh4RbqRBatDG',
+      'https://lh3.googleusercontent.com/d/1W2uohxSkZbTQZUGNTzGmt1fW-4V0ZX2i',
+      'https://lh3.googleusercontent.com/d/1qOq6dzqk3jxPaMB4t0LoQ0VEydTJyNMw'
     ],
-    materials: ['American Walnut', 'Micro-cement', 'Statuario Marble', 'Linen Upholstery', 'Brushed Nickel'],
+    materials: [
+      'WPC Louver',
+      'Tagan Glass Railing',
+      'Natural Stone',
+      'Vertical Gardening',
+      'Textured Paint',
+      'Italian Tile',
+      'Granite Flooring'
+    ],
     stats: [
-      { label: 'Floor Space', value: '4,600 sq.ft.' },
-      { label: 'Bedrooms', value: '4 Suites' },
-      { label: 'Ceiling Height', value: '11.5 ft' },
-      { label: 'Year', value: '2024' },
+      {
+        label: 'Built up Space',
+        value: '5400 sq.ft.'
+      },
+      {
+        label: 'Floors',
+        value: '2'
+      },
+      {
+        label: 'Year',
+        value: '2027'
+      }
     ],
+    featured: false,
+    isLive: true,
+    progress: 86,
+    currentPhase: '',
+    estimatedHandover: 'September 2027',
+    blueprints: []
   },
   {
     id: 5,
-    slug: 'grand-estate-residence-live',
-    title: 'The Grand Estate Villa',
-    category: 'Residential',
-    location: 'Civil Lines, Jalandhar',
-    year: '2025',
-    description: 'A 6,500 sq.ft. neo-classical private estate currently in the active facade and finishing stage.',
-    longDescription:
-      'A magnum-opus private residence featuring soaring double-height porticos, sweeping helical stairs, and subterranean entertainment suites. Currently ongoing with structural shell 100% complete and facade cladding in active progress.',
-    scope: ['Architectural Blueprinting', 'RCC Superstructure Design', 'Limestone Facade', 'Third-Party Turnkey Referral'],
-    status: 'Under Construction',
-    isLive: true,
+    slug: 'the-mobile-studio',
+    title: 'The Mobile Studio',
+    category: 'Commercial',
+    location: 'Dhandari Kalan, Ludhiana, Punjab',
+    year: '2026',
+    description: 'Where Innovation Meets Experience – A Modern Destination for Technology, Style, and Smart Living',
+    longDescription: 'The Mobile Studio is a contemporary commercial showroom design project envisioned to create an engaging, premium, and customer-friendly retail environment. The design focuses on combining modern aesthetics with functional space planning to deliver a seamless shopping experience.',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Completed',
+    isLive: false,
     progress: 78,
     currentPhase: 'Façade Cladding & High-Performance Glazing',
     estimatedHandover: 'October 2025',
-    area: '6,500 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    area: '420 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1AM1mbLbx9aA7RpmROJqKnbq311XEUFTP',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?w=1200&q=80',
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1AM1mbLbx9aA7RpmROJqKnbq311XEUFTP',
+      'https://lh3.googleusercontent.com/d/1t0P6YN2A99SCTIuGq284uQA1X5fK1Sjm',
+      'https://lh3.googleusercontent.com/d/1r4wDCt7-qX44m-YwWitcajqnlsqfbfnW',
+      'https://lh3.googleusercontent.com/d/1mrCRqPE1G4qP8hEQcXCcKKnf0V7WKmXy',
+      'https://lh3.googleusercontent.com/d/1_mN_-p0hLS8miA1CtaCfZKA1Uk8EZHep'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?w=1200&q=80',
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1AM1mbLbx9aA7RpmROJqKnbq311XEUFTP',
+      'https://lh3.googleusercontent.com/d/1t0P6YN2A99SCTIuGq284uQA1X5fK1Sjm',
+      'https://lh3.googleusercontent.com/d/1r4wDCt7-qX44m-YwWitcajqnlsqfbfnW',
+      'https://lh3.googleusercontent.com/d/1mrCRqPE1G4qP8hEQcXCcKKnf0V7WKmXy',
+      'https://lh3.googleusercontent.com/d/1_mN_-p0hLS8miA1CtaCfZKA1Uk8EZHep'
     ],
     featured: true,
-    materials: ['Portuguese Limestone', 'Double Glazed Low-E Glass', 'Structural Steel', 'Burma Teak'],
-    stats: [
-      { label: 'Built Area', value: '6,500 sq.ft.' },
-      { label: 'Current Progress', value: '78%' },
-      { label: 'Target Handover', value: 'Oct 2025' },
-      { label: 'Site Status', value: 'Live Active' },
+    materials: [
+      'ACP Sheet',
+      'MS Frame',
+      'Illuminated Strips',
+      'Pop ceiling',
+      'VPC louver',
+      'Vitrified Tile'
     ],
+    stats: [
+      {
+        label: 'Built Area',
+        value: '420 sq.ft.'
+      },
+      {
+        label: 'Floor',
+        value: '2'
+      },
+      {
+        label: 'Site Status',
+        value: 'Completed'
+      }
+    ],
+    blueprints: []
   },
   {
     id: 6,
-    slug: 'apex-commercial-plaza-live',
-    title: 'Apex Business Center',
-    category: 'Commercial',
-    location: 'South City, Ludhiana',
-    year: '2025',
-    description: 'A 5-story premier retail and corporate complex currently undergoing structural framing.',
-    longDescription:
-      'Apex Business Center represents our largest ongoing commercial venture. The design prioritizes energy conservation with ventilated terracotta facades and double-height retail anchor stores on ground and mezzanine levels.',
-    scope: ['Commercial Architecture', 'Deep Foundation Engineering', 'Third-Party Contractor Advisory', 'MEP Design'],
+    slug: 'sukhmani-villa',
+    title: 'Sukhmani Villa',
+    category: 'Residential',
+    location: 'Subhash Colony, Mullanpur Dakha,Ludhiana',
+    year: '2028',
+    description: 'An Expression of Modern Elegance, Where Contemporary Architecture, Natural Beauty, and Luxurious Living Come Together in Perfect Harmony',
+    longDescription: 'Sukhmani Villa is a contemporary residential architectural project designed to reflect elegance, sophistication, and modern living. The architectural concept combines clean geometric forms, balanced proportions, premium natural textures, and thoughtfully integrated lighting to create a distinctive residential identity',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
     status: 'Under Construction',
     isLive: true,
-    progress: 55,
-    currentPhase: 'RCC Floor Slab Castings & Structural Core (Level 4)',
-    estimatedHandover: 'January 2026',
-    area: '34,000 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
+    progress: 40,
+    currentPhase: 'Ground Floor Slab Casting',
+    estimatedHandover: 'Jan 2028',
+    area: '3375 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1FfQlp-F0tTP0QKDhKQwPFDbusHRT1pq1',
     gallery: [
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
-      'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?w=1200&q=80',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1ybs9H8MGbia9FDqgu4DTUbGWh1TuKPkH',
+      'https://lh3.googleusercontent.com/d/1R8HyodPLXwvDeJP0-qKOBOr9E65uLpOn',
+      'https://lh3.googleusercontent.com/d/1ZApPWmrta6Zv2KtrSrEyh719gR4mJ-u3',
+      'https://lh3.googleusercontent.com/d/1TtsPc9F2058R90PP9O6-X7fyIl0W1suC'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80',
-      'https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?w=1200&q=80',
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1ybs9H8MGbia9FDqgu4DTUbGWh1TuKPkH',
+      'https://lh3.googleusercontent.com/d/1R8HyodPLXwvDeJP0-qKOBOr9E65uLpOn',
+      'https://lh3.googleusercontent.com/d/1ZApPWmrta6Zv2KtrSrEyh719gR4mJ-u3',
+      'https://lh3.googleusercontent.com/d/1TtsPc9F2058R90PP9O6-X7fyIl0W1suC'
     ],
     featured: true,
-    materials: ['High Strength RCC', 'Terracotta Rainscreen', 'Toughened Glass', 'Structural Steel Trusses'],
-    stats: [
-      { label: 'Total Footprint', value: '34,000 sq.ft.' },
-      { label: 'Current Progress', value: '55%' },
-      { label: 'Floors', value: 'G + 4 Floors' },
-      { label: 'Site Status', value: 'Live Active' },
+    materials: [
+      'Textured Paint',
+      'Natural Stone',
+      'MS Parabola',
+      'Tafan Glass Railing',
+      'Sofit Panel'
     ],
+    stats: [
+      {
+        label: 'Total Footprint',
+        value: '3375 sq.ft.'
+      },
+      {
+        label: 'Current Progress',
+        value: '40%'
+      },
+      {
+        label: 'Floors',
+        value: '2.5 Floors'
+      },
+      {
+        label: 'Site Status',
+        value: 'Live Active'
+      }
+    ],
+    blueprints: []
   },
   {
     id: 7,
-    slug: 'contemporary-dual-story',
-    title: 'Contemporary Dual-Story',
+    slug: 'punjabi-classical-villa',
+    title: 'Punjabi Classical Villa',
     category: 'Residential',
-    location: 'Mohali, Punjab',
-    year: '2023',
-    description: 'A contemporary custom-built residence featuring expansive glazing and modern spatial planning.',
-    longDescription:
-      'Built across two stories in Mohali, this contemporary residence showcases thoughtful spatial planning with an emphasis on natural light. Floor-to-ceiling glazing connects the living areas to a private garden, while the structured facade in off-white plaster and dark accents gives it a bold yet refined look.',
-    scope: ['Custom Design', 'Structural Work', 'MEP Services', 'Interior Works', 'Finishing'],
-    status: 'Completed',
-    area: '3,600 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    location: 'Mullanpur Link Road,Ludhiana',
+    year: '2028',
+    description: 'Celebrating the Rich Heritage of Punjabi Architecture Through Timeless Elegance, Traditional Craftsmanship, and Contemporary Luxury',
+    longDescription: 'The Punjabi Classical Villa is a residential architectural project inspired by the richness of traditional Punjabi aesthetics, blended with classical architectural elements and modern-day comfort. The design reflects a strong cultural identity through its elegant façade, traditional detailing, and warm, welcoming character',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Under Construction',
+    area: '5500 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1XL4Pd2ZDKobx5k53T1oMj_UquytzZYCp',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1XL4Pd2ZDKobx5k53T1oMj_UquytzZYCp',
+      'https://lh3.googleusercontent.com/d/151jPLx0RBOpupprHSut77zrPP5DUbxpP',
+      'https://lh3.googleusercontent.com/d/1rEE0VvUXWroXgAvtMRalYy-0afrh3l2U',
+      'https://lh3.googleusercontent.com/d/1YcsYGnxEp8rkGvoWwcvidFdE3KKb6XtN',
+      'https://lh3.googleusercontent.com/d/1SZasXdUlDgyqDiWHSpJZY0vYy7mSySRT'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1XL4Pd2ZDKobx5k53T1oMj_UquytzZYCp',
+      'https://lh3.googleusercontent.com/d/151jPLx0RBOpupprHSut77zrPP5DUbxpP',
+      'https://lh3.googleusercontent.com/d/1rEE0VvUXWroXgAvtMRalYy-0afrh3l2U',
+      'https://lh3.googleusercontent.com/d/1YcsYGnxEp8rkGvoWwcvidFdE3KKb6XtN',
+      'https://lh3.googleusercontent.com/d/1SZasXdUlDgyqDiWHSpJZY0vYy7mSySRT'
     ],
-    materials: ['Polished Concrete', 'Tempered Glass', 'Aluminium Frames', 'Veneer Panels', 'Quartz Countertops'],
+    materials: [
+      'Polished Concrete',
+      'Tempered Glass',
+      'MS Railing',
+      'Blusters Railing',
+      'Textured Paint',
+      'Natural Stone'
+    ],
     stats: [
-      { label: 'Built Area', value: '3,600 sq.ft.' },
-      { label: 'Duration', value: '15 Months' },
-      { label: 'Floors', value: '2' },
-      { label: 'Year', value: '2023' },
+      {
+        label: 'Built Area',
+        value: '5500 sq.ft.'
+      },
+      {
+        label: 'Duration',
+        value: '36 Months'
+      },
+      {
+        label: 'Floors',
+        value: '2.5'
+      },
+      {
+        label: 'Year',
+        value: '2028'
+      }
     ],
+    featured: false,
+    isLive: true,
+    progress: 70,
+    currentPhase: '',
+    estimatedHandover: 'April 2028',
+    blueprints: []
   },
   {
     id: 8,
-    slug: 'luxury-custom-residence',
-    title: 'Heritage Courtyard Residence',
+    slug: 'modern-tropical-villa',
+    title: 'Modern Tropical Villa',
     category: 'Residential',
-    location: 'Patiala, Punjab',
-    year: '2024',
-    description: 'A sprawling luxury custom residence with bespoke architectural details and landscaped central courtyard.',
-    longDescription:
-      'Situated in Patiala, this luxury custom residence was designed around the vision of refined living with a passive cooling central courtyard. The home features bespoke architectural millwork, a double-height entrance lobby, and an infinity reflecting pool.',
-    scope: ['Bespoke Architecture', 'Landscape Design', 'Interior Design', 'Smart Home Integration', 'Third-Party Turnkey Referral'],
-    status: 'Completed',
-    area: '5,800 sq.ft.',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
+    location: 'Mullanpur Dakha, Punjab',
+    year: '2028',
+    description: 'Where Tropical Serenity Meets Modern Luxury – A Perfect Harmony of Nature, Architecture, and Contemporary Living',
+    longDescription: 'The Modern Tropical Villa is a contemporary residential architectural project inspired by the beauty of tropical surroundings and the simplicity of modern design. The concept focuses on creating a peaceful, refreshing, and elegant living environment by blending natural elements with clean architectural forms and functional spaces.',
+    scope: [
+      'Architectural Design',
+      'Third-Party Turnkey Referral'
+    ],
+    status: 'Planning Phase',
+    area: '3600 sq.ft.',
+    image: 'https://lh3.googleusercontent.com/d/1eF9R03u5HKaGxIByxI20kcmvr8TDSTlO',
     gallery: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1eF9R03u5HKaGxIByxI20kcmvr8TDSTlO',
+      'https://lh3.googleusercontent.com/d/1sUGTbBtgqtET9MAOo3046vSxnfF_E35V',
+      'https://lh3.googleusercontent.com/d/1unm_KKkk51rplpLksKOs_A_76V_nSyvz'
     ],
     views360: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=80',
-      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
-      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=80',
+      'https://lh3.googleusercontent.com/d/1eF9R03u5HKaGxIByxI20kcmvr8TDSTlO',
+      'https://lh3.googleusercontent.com/d/1sUGTbBtgqtET9MAOo3046vSxnfF_E35V',
+      'https://lh3.googleusercontent.com/d/1unm_KKkk51rplpLksKOs_A_76V_nSyvz'
     ],
-    materials: ['Imported Marble', 'Walnut Veneer', 'Bronze Fixtures', 'Handcrafted Tiles', 'Oak Flooring'],
+    materials: [
+      'Sofit Panel',
+      'Tafan Glass',
+      'Natural Stone Cladding',
+      'Textured Paint',
+      'Veneer Door'
+    ],
     stats: [
-      { label: 'Built Area', value: '5,800 sq.ft.' },
-      { label: 'Duration', value: '22 Months' },
-      { label: 'Floors', value: '3' },
-      { label: 'Year', value: '2024' },
+      {
+        label: 'Built Area',
+        value: '3600 sq.ft.'
+      },
+      {
+        label: 'Duration',
+        value: '24 Months'
+      },
+      {
+        label: 'Floors',
+        value: '2.5'
+      },
+      {
+        label: 'Year',
+        value: '2028'
+      }
     ],
-  },
+    featured: false,
+    isLive: false,
+    progress: 75,
+    currentPhase: '',
+    estimatedHandover: '',
+    blueprints: []
+  }
 ];
 
 // For backward compatibility
@@ -334,3 +537,4 @@ export const filterCategories: FilterCategory[] = [
   'Interior Design',
   'Live Projects',
 ];
+
