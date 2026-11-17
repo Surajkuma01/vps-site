@@ -1803,6 +1803,31 @@ export default function AdminPage() {
 
               <div>
                 <label style={{ display: 'block', fontFamily: 'Manrope, sans-serif', fontSize: '11px', fontWeight: 700, color: '#666', textTransform: 'uppercase', marginBottom: '6px' }}>
+                  Cover Image URL (Direct Link or Google Drive)
+                </label>
+                <input
+                  type="text"
+                  value={editingService.image || ''}
+                  onChange={e => setEditingService({ ...editingService, image: e.target.value })}
+                  onBlur={e => setEditingService({ ...editingService, image: normalizeImageUrl(e.target.value) })}
+                  placeholder="https://lh3.googleusercontent.com/... or Google Drive Link"
+                  style={{ width: '100%', padding: '11px 14px', border: '1px solid #ccc', borderRadius: '4px', fontFamily: 'Manrope, sans-serif', fontSize: '13px' }}
+                />
+                {editingService.image && (
+                  <div style={{ marginTop: '8px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    <img
+                      src={normalizeImageUrl(editingService.image)}
+                      alt="Preview"
+                      referrerPolicy="no-referrer"
+                      style={{ width: '60px', height: '40px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #ddd' }}
+                    />
+                    <span style={{ fontSize: '11px', color: '#666' }}>Live Image Preview</span>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <label style={{ display: 'block', fontFamily: 'Manrope, sans-serif', fontSize: '11px', fontWeight: 700, color: '#666', textTransform: 'uppercase', marginBottom: '6px' }}>
                   Overview Description
                 </label>
                 <textarea

@@ -38,7 +38,19 @@ export function SiteDataProvider({ children }: { children: React.ReactNode }) {
       const saved = localStorage.getItem(STORAGE_SERVICES_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          // Merge with initialServices so code updates to service images and copy are honored
+          return initialServices.map(initS => {
+            const match = parsed.find((p: ServiceItem) => p.id === initS.id);
+            if (!match) return initS;
+            // If the saved image is the old Unsplash image or empty, adopt the fresh initialServices image
+            const isOldUnsplash = match.image && match.image.includes('photo-1541888946425-d0fbb186c5f7');
+            return {
+              ...match,
+              image: isOldUnsplash || !match.image ? initS.image : match.image,
+            };
+          });
+        }
       }
     } catch (e) {
       console.error('Error loading services from localStorage', e);
