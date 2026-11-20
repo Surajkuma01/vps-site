@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', color: tc, textTransform: 'uppercase' }}>OUR STORY</span>
               </div>
               <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 300, color: dark, lineHeight: 1.1, marginBottom: '1.5rem' }}>
-                A Legacy of Craftsmanship &amp; Architectural Design
+                A Legacy of Architectural Design & Craftsmanship;
               </h2>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: '#5a5650', lineHeight: 1.8, marginBottom: '1.25rem' }}>
                 Founded in 1996 by Vijaypal, VPS began its journey with a commitment to quality craftsmanship in tile and marble flooring, installation, and cladding. What started as a specialised construction service gradually built a reputation through dedication, precision, and trust—values that continue to define our work today.
