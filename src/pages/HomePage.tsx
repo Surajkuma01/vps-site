@@ -1022,7 +1022,7 @@ export default function HomePage() {
                       lineHeight: 1,
                     }}
                   >
-                    10+
+                    28+
                   </div>
                   <div
                     style={{
@@ -1035,7 +1035,7 @@ export default function HomePage() {
                       marginTop: '4px',
                     }}
                   >
-                    Years Excellence
+                    Years Legacy
                   </div>
                 </div>
               </div>
@@ -1059,14 +1059,14 @@ export default function HomePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                A Decade of Building<br />
-                <em style={{ fontStyle: 'italic', color: '#e8dcc8' }}>Excellence</em>
+                Crafting Spaces<br />
+                <em style={{ fontStyle: 'italic', color: '#e8dcc8' }}>Since 1996</em>
               </h2>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: 'rgba(232,220,200,0.65)', lineHeight: 1.85, marginBottom: '1.25rem' }}>
-                FORM & SPACE BY VPS is a Punjab-based infrastructure and construction company with over a decade of experience delivering premium residential and commercial projects across Ludhiana, Mohali, Amritsar, and beyond.
+                Founded in 1996 by Vijaypal, VPS began with a commitment to quality craftsmanship in tile and marble flooring and cladding. In 2023, VPS expanded into architectural design and planning, bringing together decades of practical construction experience with a contemporary design approach.
               </p>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: 'rgba(232,220,200,0.65)', lineHeight: 1.85, marginBottom: '2.5rem' }}>
-                We combine architectural precision, quality materials, and disciplined execution to create spaces that stand the test of time.
+                Today, VPS stands at the intersection of tradition, innovation, and thoughtful design—building functional, timeless, and enduring spaces.
               </p>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
@@ -1352,7 +1352,7 @@ export default function HomePage() {
 
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a
-                    href="https://wa.me/918427930197?text=Hello%20D%20Lam%20Infra,%20I%20am%20interested%20in%20discussing%20a%20project."
+                    href="https://wa.me/918427930197?text=Hello%20I%20am%20interested%20in%20discussing%20a%20project."
                     target="_blank"
                     rel="noreferrer"
                     style={{

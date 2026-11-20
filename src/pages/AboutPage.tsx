@@ -120,9 +120,9 @@ export default function AboutPage() {
                     minWidth: '180px', boxShadow: '0 20px 50px rgba(0,0,0,0.3)',
                   }}
                 >
-                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3.5rem', fontWeight: 300, color: tc, lineHeight: 1, marginBottom: '4px' }}>10+</div>
+                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '3.5rem', fontWeight: 300, color: tc, lineHeight: 1, marginBottom: '4px' }}>28+</div>
                   <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '10px', fontWeight: 700, letterSpacing: '0.18em', color: 'rgba(232,220,200,0.6)', textTransform: 'uppercase' }}>
-                    Years of Excellence
+                    Years of Legacy
                   </div>
                 </div>
               </div>
@@ -134,16 +134,19 @@ export default function AboutPage() {
                 <span style={{ fontFamily: 'Manrope, sans-serif', fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', color: tc, textTransform: 'uppercase' }}>OUR STORY</span>
               </div>
               <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 300, color: dark, lineHeight: 1.1, marginBottom: '1.5rem' }}>
-                A Legacy of Quality Construction in Punjab
+                A Legacy of Craftsmanship &amp; Architectural Design
               </h2>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: '#5a5650', lineHeight: 1.8, marginBottom: '1.25rem' }}>
-                FORM & SPACE BY VPS was founded with a singular mission: to raise the standard of construction in Punjab. Over more than a decade, we have grown from a small construction firm into a trusted name in premium residential and commercial development.
+                Founded in 1996 by Vijaypal, VPS began its journey with a commitment to quality craftsmanship in tile and marble flooring, installation, and cladding. What started as a specialised construction service gradually built a reputation through dedication, precision, and trust—values that continue to define our work today.
               </p>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: '#5a5650', lineHeight: 1.8, marginBottom: '1.25rem' }}>
-                Our approach is simple — we treat every project as if it were our own home. That means no shortcuts, no compromise on materials, and a relentless focus on craftsmanship at every stage of construction.
+                Over the years, our experience in materials, craftsmanship, and construction has shaped our understanding of spaces and the way they are built. In 2023, VPS expanded into architectural design and planning, bringing together decades of practical construction experience with a contemporary design approach.
+              </p>
+              <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: '#5a5650', lineHeight: 1.8, marginBottom: '1.25rem' }}>
+                Today, VPS stands at the intersection of tradition, innovation, and thoughtful design. From material detailing and interior spaces to architectural planning and construction, we strive to create spaces that are functional, timeless, and meaningful.
               </p>
               <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.95rem', color: '#5a5650', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                From luxury villas in Ludhiana to commercial developments in Amritsar, FORM & SPACE BY VPS has delivered over 50 projects with 100% client satisfaction — and we're just getting started.
+                With a legacy rooted in craftsmanship and a vision focused on the future, VPS continues to evolve—building not just structures, but lasting relationships and enduring spaces.
               </p>
               <Link to="/projects" className="btn-primary" style={{ display: 'inline-flex' }}>
                 Explore Our Work <ArrowUpRight size={14} />
@@ -163,7 +166,7 @@ export default function AboutPage() {
             {[
               { val: 50, suffix: '+', lab: 'Projects Delivered' },
               { val: 100, suffix: '%', lab: 'Client Satisfaction' },
-              { val: 10, suffix: '+', lab: 'Years Experience' },
+              { val: 28, suffix: '+', lab: 'Years Experience' },
               { val: 5, suffix: '', lab: 'Cities Covered' },
             ].map((s, i) => (
               <div
